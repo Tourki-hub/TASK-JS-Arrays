@@ -10,8 +10,13 @@
  */
 function isArrayLengthOdd(numbers) {
   // Your code here
+  if (numbers.length % 2 == 1) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
-
+isArrayLengthOdd([1, 2, 4]);
 /**
  * isArrayLengthEven(numbers):
  * - receives array `numbers`
@@ -24,7 +29,13 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   // Your code here
+  if (numbers.length % 2 == 0) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
+isArrayLengthEven([1, 2, 3]);
 
 /**
  * addLailaToArray(instructors):
@@ -36,8 +47,11 @@ function isArrayLengthEven(numbers) {
  */
 function addLailaToArray(instructors) {
   // Your code here
+  let list = "lila";
+  instructors.push(list);
+  return instructors;
 }
-
+console.log(addLailaToArray(["tourki"]));
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -48,7 +62,10 @@ function addLailaToArray(instructors) {
  */
 function eliminateTeam(teams) {
   // Your code here
+  let list = teams.pop();
+  return list;
 }
+console.log(eliminateTeam(["Tourki", "Ali", "Mohammed", "aya"]));
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -62,7 +79,14 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
+  if (fruits.length % 2 == 0) {
+    let x = fruits.length / 2;
+    return fruits.slice(x, fruits.length);
+  } else {
+    return [];
+  }
 }
+console.log(secondHalfOfArrayIfItIsEven(["Apple", "orange", "banana"]));
 
 /**
  * youGottaCalmDown(shout):
@@ -80,4 +104,9 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
+  let y = shout.indexOf("!");
+  shout.indexOf("!");
+
+  return shout.slice(0, y + 1);
 }
+console.log(youGottaCalmDown("Hi!!"));

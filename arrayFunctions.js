@@ -105,8 +105,10 @@ console.log(secondHalfOfArrayIfItIsEven(["Apple", "orange", "banana"]));
 function youGottaCalmDown(shout) {
   // Your code here
   let y = shout.indexOf("!");
-  shout.indexOf("!");
-
-  return shout.slice(0, y + 1);
+  if (y >= 0) {
+    return shout.slice(0, y + 1);
+  } else {
+    return shout;
+  }
 }
-console.log(youGottaCalmDown("Hi!!"));
+console.log(youGottaCalmDown("Hellos"));
